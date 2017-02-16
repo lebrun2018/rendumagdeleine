@@ -6,8 +6,11 @@ export default Ember.Component.extend({
     authenticate(){
       let {login, password} = this.getProperties("login", "password");
       this.get("session").authenticate("authenticator:devise", login, password)
-        .catch((reason)=>{
-          this.set("errorMessage",reason.error);
+        .then( () => {
+          this.set('errorMessage', null);
+        },
+        (reason) => {
+          this.set('errorMessage', reason.error || reason);
         });
     }
   }

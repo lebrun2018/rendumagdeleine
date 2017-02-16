@@ -1,9 +1,15 @@
 
 <h3> La timeline de l'application {{model.apps.name}} </h3>
 <br/>
+
 {{#each model.events as |event| }}
 	{{#if (eq model.apps.name event.app_name)}}
-		{{event.type}} <br/>
+		<div class="card">
+			<div class="card-block">
+				<h4 class="card-title">{{event.type}}</h4>
+				<h6 class="card-subtitle mb-2 text-muted">Date : {{event.created_at}}</h6>
+			</div>
+		</div>
 	{{/if}}
 {{/each}}
 

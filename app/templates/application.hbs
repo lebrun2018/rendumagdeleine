@@ -1,17 +1,17 @@
 
 
 {{#bs-navbar type=(if inverse 'inverse') fluid=fluid as |navbar|}}
-	<div class="navbar-header">
-		{{#navbar.toggle}}
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		{{/navbar.toggle}}
-	   {{#link-to "index" class="navbar-brand"}}<img src="/scalingo_logo.png" height="20px" alt="Responsive image">{{/link-to}}
+    <div class="navbar-header">
+        {{#navbar.toggle}}
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        {{/navbar.toggle}}
+	   {{#link-to "index" class="navbar-brand"}}<img src="/scalingo_logo.png" height="30px" alt="Responsive image">{{/link-to}}
 	</div>
 	{{#navbar.content}}
-		{{#navbar.nav class="navbar-right" as |nav|}}
+		{{#navbar.nav class="navbar-form navbar-right" as |nav|}}
 			{{#nav.item}}{{#link-to "index"}}Home{{/link-to}}{{/nav.item}}
 			{{#if session.isAuthenticated }}
 				{{#nav.item}}{{#link-to "app"}}Mes applications{{/link-to}}{{/nav.item}}

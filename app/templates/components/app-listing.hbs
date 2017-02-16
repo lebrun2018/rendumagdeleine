@@ -1,4 +1,9 @@
-<article class="listing">
-  <h3>{{#link-to "app.timeline" app}}{{app.name}}{{/link-to}}</h3>
-</article>
+
+<div class="card">
+	<div class="card-block">
+		<h4 class="card-title">{{#link-to "app.timeline" app}}{{app.name}}{{/link-to}}</h4>
+		<h6 class="card-subtitle mb-2 text-muted">{{app.url}}</h6>
+		<p class="card-text">Date de création : {{app.created_at}}</p>
+	</div>
+</div>
 

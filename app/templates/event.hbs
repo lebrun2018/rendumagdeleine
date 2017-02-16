@@ -1,12 +1,15 @@
-
+<br/>
 <h3> Mes Événements </h3>
+<br/>
 
-<article class="listing">
-	
 {{#each model as |event| }}
-	{{event.type}} <br/>
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">{{event.type}}</h4>
+			<h6 class="card-subtitle mb-2 text-muted">À propos de l'application {{event.app_name}}</h6>
+		</div>
+	</div>
 {{/each}}
 
-</article>
 
 {{outlet}}
