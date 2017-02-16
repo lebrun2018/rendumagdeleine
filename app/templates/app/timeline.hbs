@@ -1,0 +1,10 @@
+
+<h3> La timeline de l'application {{model.apps.name}} </h3>
+<br/>
+{{#each model.events as |event| }}
+	{{#if (eq model.apps.name event.app_name)}}
+		{{event.type}} <br/>
+	{{/if}}
+{{/each}}
+
+{{outlet}}

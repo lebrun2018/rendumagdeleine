@@ -1,0 +1,12 @@
+
+<h3> Mes Événements </h3>
+
+<article class="listing">
+	
+{{#each model as |event| }}
+	{{event.type}} <br/>
+{{/each}}
+
+</article>
+
+{{outlet}}
